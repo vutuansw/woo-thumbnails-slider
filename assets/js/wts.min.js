@@ -1,0 +1,4 @@
+/**
+ * WooCommerce Thumbnails Slider js front-end
+ */
+jQuery(function(t){"use strict";if(t.fn.flexslider&&t(".wts_control_nav").length){var n=t(".wts_control_nav").data("options");setTimeout(function(){t(".wts_control_nav").appendTo(".woocommerce-product-gallery").show(),t(".wts_control_nav").flexslider(n)},10),t(".variations_form.cart").on("found_variation",function(n,o){setTimeout(function(){var n=t('.wts_control_nav li img[src="'+o.image.thumb_src+'"]');n.length&&(n.attr("srcset",""),t(".wts_control_nav").flexslider(n.index()))},10)}),t(".variations_form.cart").on("click",".reset_variations",function(n){t(".wts_control_nav").flexslider(0),n.preventDefault()})}});
